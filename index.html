@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will It Rain On My Parade?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Will It Rain On My Parade?</h1>
+            <p class="subtitle">NASA Space Apps Challenge 2025</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <h2>Plan Your Outdoor Event</h2>
+                <div class="search-container">
+                    <div class="input-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" placeholder="Enter city or coordinates">
+                    </div>
+                    <div class="input-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <button id="search-btn">Check Weather <i class="fas fa-search"></i></button>
+                </div>
+            </section>
+
+            <section class="results-section" id="results">
+                <div class="results-container hidden" id="results-container">
+                    <h2>Weather Forecast</h2>
+                    <div class="weather-summary">
+                        <div class="location-info">
+                            <h3 id="result-location">City Name</h3>
+                            <p id="result-date">Date</p>
+                        </div>
+                        <div class="weather-icon">
+                            <i id="weather-icon" class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="conditions">
+                        <div class="condition-card">
+                            <h4>Temperature</h4>
+                            <div class="condition-value" id="temperature">--</div>
+                            <div class="condition-status" id="temp-status">--</div>
+                        </div>
+                        <div class="condition-card">
+                            <h4>Precipitation</h4>
+                            <div class="condition-value" id="precipitation">--</div>
+                            <div class="condition-status" id="precip-status">--</div>
+                        </div>
+                        <div class="condition-card">
+                            <h4>Wind</h4>
+                            <div class="condition-value" id="wind">--</div>
+                            <div class="condition-status" id="wind-status">--</div>
+                        </div>
+                        <div class="condition-card">
+                            <h4>Comfort</h4>
+                            <div class="condition-value" id="comfort">--</div>
+                            <div class="condition-status" id="comfort-status">--</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation">
+                        <h3>Event Recommendation</h3>
+                        <p id="recommendation-text">Based on the forecast, we recommend...</p>
+                    </div>
+                    
+                    <div class="visualization">
+                        <h3>Weather Trends</h3>
+                        <div class="chart-container">
+                            <canvas id="weather-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Developed for NASA Space Apps Challenge 2025</p>
+            <p>Powered by Weather Data APIs</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
